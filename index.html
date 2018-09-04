@@ -27,7 +27,7 @@
 
         var person = {
             name: "Lucy", 
-            age: 45, 
+            age: 25, 
             occupation: "Cleaner"
         };
 
@@ -113,15 +113,42 @@
         var firstString = "Hi I am ";
         var age = 25; 
         var endResults = firstString + age;
-        document.write("<br> Concaatenate a String and a Number together: " + endResults);
+        document.write("<br> Concatenate a String and a Number together: " + endResults);
         document.write("<br>");
         var myList = ["Cheddar", "Brie", "Wenslydale", "Goats", "Cambembert", "Stilton"];
+        document.write()
         for(i = 0; i < myList.length; i++)
         {
             document.write(myList[i] + "<br>")
         };
+        myList.push("Babybell");
+        myList.splice(4,1);
+        myList.splice(4,0, "Blue", "Gouda", "Halloumi");
 
+        document.write("<br> Add and Delete some Cheeses <br>")
+        for(i = 0; i < myList.length; i++)
+        {
+            document.write(myList[i] + "<br>")
+        };
 </script>
+
+<div>
+    <script> 
+        function ageBetween(bottom, top)
+        {
+            if(person.age >= bottom && person.age <= top)
+            {
+                document.write("<br>" + person.name + " is between the age " + bottom + " and " + top + "<br>");
+                document.write("<br> they are " + person.age);
+            }
+            else
+            {
+                document.write("<br> NOT OF AGE!!");
+            }
+        }; 
+        ageBetween(20,40); 
+    </script>
+</div>
 
  </div>
 </body>
