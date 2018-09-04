@@ -1,0 +1,130 @@
+<html>  
+    <head>  </head>
+
+    <body>
+        <h1> Coding Challenge 1 </h1>
+        <script> 
+        var variable3 = "GOOD MORNING!";
+        // window.alert(variable3);   
+        console.log(variable3);
+
+        var creatingScript = "Hello World!";
+        document.write(creatingScript + "<br>");
+
+        function one(input)
+        {
+            console.log(input*input);
+        }
+        one(4); 
+
+        document.write("\n"); 
+        
+        function two(input1, input2, input3)
+        {  
+             document.write("<br>" + "Function 2:" + " " + (input1 + input2 + input3));
+        }
+        two(2,3,4); 
+
+        var person = {
+            name: "Lucy", 
+            age: 45, 
+            occupation: "Cleaner"
+        };
+
+        console.log(person.name);
+        document.write("<br> My Name is "+ person.name + "<br> My Occupation is a " + person.occupation);
+
+        person.name = "Emily"; 
+        document.write("<br> Name Modified: "+ person.name); 
+
+</script>  
+
+
+<div> 
+    <button onclick="two(2,3,4)"> FUNCTION 2 </button> 
+</div>
+
+<div>
+    <script>   
+        function increaseAge(up)
+        {
+            person.age += up;
+            document.write("<br> " + person.name + " is " + person.age + " years old now");
+        }
+     </script>
+    <button onclick="increaseAge(10)"> Person Increase Age </button>
+ </div>
+
+ <div> 
+     <script>
+        function makePeople(inputName, inputAge, inputOccupation)
+        {
+            var people = 
+                {
+                    name: inputName,
+                    age: inputAge,
+                    occupation: inputOccupation
+                 };
+            document.write("Name: " + people.name + "<br> Age: " + people.age + "<br> Occupation: " + people.occupation); 
+        }
+    </script>
+
+     
+         <input id="nameID" type="text" placeholder="name..." required = "required">
+         <input id= "numberID" type="number" placeholder="age...">
+         <input id="occupationID" type ="text" placeholder ="occupation..." required = "required"> 
+        <button onclick="makePeople(window.document.getElementById('nameID').value, window.document.getElementById('numberID').value, window.document.getElementById('occupationID').value)"> <h2> Create Person </h2> </button>
+     
+ </div>
+<br/> 
+ <div>
+     <script>
+         function addNum(first, second)
+         {
+             document.getElementById('c').value = (parseInt(first) + parseInt(second));
+         }
+    </script>
+<br/>
+<input id="a" type="number" placeholder="input first number" required = "required">
+<input id="b" type="number" placeholder="input second number" required = "required">
+<button onclick="addNum(window.document.getElementById('a').value, window.document.getElementById('b').value)"> <h2> Add Them Up </h2> </button>
+<input id="c" type="number" placeholder="RESULT!">
+ </div>
+<br/> 
+
+ <div>
+     <script> 
+        function upperCase(strings1)
+        {
+            var stringsUp = strings1.toUpperCase(); 
+            document.getElementById('result').value = stringsUp;
+        }
+        
+</script>
+
+<input id="lowerCase" type="text" placeholder="input a text..."> 
+<button onclick="upperCase(window.document.getElementById('lowerCase').value)"> <h2> Convert to Upper Case </h2> </button>
+<input id = "result" type="text" placeholder="..."> 
+
+ </div>
+
+ <div>  
+    <script>
+        var firstString = "Hi I am ";
+        var age = 25; 
+        var endResults = firstString + age;
+        document.write("<br> Concaatenate a String and a Number together: " + endResults);
+        document.write("<br>");
+        var myList = ["Cheddar", "Brie", "Wenslydale", "Goats", "Cambembert", "Stilton"];
+        for(i = 0; i < myList.length; i++)
+        {
+            document.write(myList[i] + "<br>")
+        };
+
+</script>
+
+ </div>
+</body>
+    
+    <footer></footer>
+</html>
